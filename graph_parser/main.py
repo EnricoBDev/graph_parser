@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import numpy as np
 
-from Edge import Edge
-from Node import Node
+from .Edge import Edge
+from .Node import Node
 
 
 def find_node_list(soup) -> list:
@@ -100,6 +100,3 @@ def get_matrix(filename: str):
                 adj_matrix[target][source] = 1
 
     return adj_matrix
-
-
-print(get_matrix("grafo.xgml"))
